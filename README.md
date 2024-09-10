@@ -1,1 +1,1 @@
-Cada pasta tem um repositório explicando como rodar as aplicações
+Cada pasta tem um README explicando como rodar as aplicações
