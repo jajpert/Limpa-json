@@ -1,0 +1,1 @@
+Cada pasta tem um repositório explicando como rodar as aplicações

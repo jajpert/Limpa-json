@@ -1,0 +1,31 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+  clean_insert:
+    build:
+      context: ./clean_insert
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+  show_data:
+    build:
+      context: ./show_data
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
